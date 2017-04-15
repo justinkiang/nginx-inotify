@@ -26,6 +26,6 @@ while read CHANGED
 do
 	echo "$CHANGED"
 	rm -rf /etc/nginx/conf.d/*
-	cp /config/live/${BRINGHUB_APP_NAME}/* /etc/nginx/conf.d/
+	cp -R /config/live/* /etc/nginx/conf.d/
     /usr/sbin/nginx -s reload &
 done
